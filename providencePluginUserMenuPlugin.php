@@ -1,8 +1,3 @@
-<!DOCTYPE HTML>
-<html>
-<head><script src="footerscript.js"></script>
-<body></body>
-</html>
 <?php
 /* ----------------------------------------------------------------------
  * mediaImportPlugin.php : 
