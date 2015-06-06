@@ -4,16 +4,27 @@
     display: none;
 }
 
+#mainContent {
+    min-height: 100%;
+    padding-bottom: 50px;
+
+}
+
 #mainContent:after, #mainContentFull:after{
+    position:absolute;
     display: block;
     clear: both;
     color: grey;
-    content: "© 2015 Whirl-i-Gig | CollectiveAccess est une marque déposée de Whirl-i-Gig";
-    padding-bottom: 30px;
+    margin-top:40px;
+    bottom:10px;
+    content: "© 2015 CollectiveAccess (™ Whirl-i-Gig) - déployé par idéesculture";
     font-size: 11px;
     font-family: 'DIN-Regular';
+    margin-left:20px;
 }
 
 #mainContentFull {
-    min-height: 90%;
+    min-height: 100%;
+    padding-bottom: 50px;
+
 }

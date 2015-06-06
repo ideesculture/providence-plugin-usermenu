@@ -1,6 +1,6 @@
 <?php
 /* ----------------------------------------------------------------------
- * mediaImportPlugin.php : 
+ * mediaImportPlugin.php :
  * ----------------------------------------------------------------------
  * CollectiveAccess
  * Open-source collections management software
@@ -15,17 +15,17 @@
  * the terms of the provided license as published by Whirl-i-Gig
  *
  * CollectiveAccess is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTIES whatsoever, including any implied warranty of 
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
+ * WITHOUT ANY WARRANTIES whatsoever, including any implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
- * This source code is free and modifiable under the terms of 
+ * This source code is free and modifiable under the terms of
  * GNU General Public License. (http://www.gnu.org/copyleft/gpl.html). See
  * the "license.txt" file for details, or visit the CollectiveAccess web site at
  * http://www.CollectiveAccess.org
  *
  * ----------------------------------------------------------------------
  */
- 
+
 	class providencePluginUserMenuPlugin extends BaseApplicationPlugin {
 		# -------------------------------------------------------
 		protected $description = 'Plugin for CollectiveAccess moving the content of the downside bar to a button';
@@ -65,33 +65,33 @@
 				} else {
 					$va_menu_items = array();
 				}
-				
+
 				$va_menu_items[Mes_preferences] = array(
-						'displayName' => 'Mes préférences', 
+						'displayName' => 'Mes préférences',
 						"default" => array(
 							'action' => '/system/Preferences/EditUIPrefs'
 						)
-					);	
-					
+					);
+
 				$va_menu_items[Deconnexion] = array(
-						'displayName' => 'Déconnexion', 
+						'displayName' => 'Déconnexion',
 						"default" => array(
 							'action' => '/system/auth/logout'
 						)
-					);	
-				
+					);
+
                 //this adds the CSS changing the style and content of the footer
                 MetaTagManager::addLink('stylesheet', __CA_URL_ROOT__."/app/plugins/providencePluginUserMenu/css/providencePluginUserMenu.css",'text/css');
 
 
                 print $va_views_images_path;
-				
+
 				$pa_menu_bar['providencePluginUserMenu_menu'] = array(
-					'displayName' => _t(' &#9734;'),
+					'displayName' => "➜",
 					'navigation' => $va_menu_items
 				);
 			}
-			
+
 			return $pa_menu_bar;
 		}
 		# -------------------------------------------------------
@@ -106,6 +106,6 @@
 					)
 			);
 		}
-		
+
 	}
 ?>
