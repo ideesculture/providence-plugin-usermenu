@@ -59,19 +59,7 @@
 			if ($o_req = $this->getRequest()) {
 
                 //we define the content of a new main menu item
-				if (isset($pa_menu_bar['providencePluginUserMenu_menu'])) {
-					$va_menu_items = $pa_menu_bar['providencePluginUserMenu_menu']['navigation'];
-					if (!is_array($va_menu_items)) { $va_menu_items = array(); }
-				} else {
-					$va_menu_items = array();
-				}
-
-				$va_menu_items[Mes_preferences] = array(
-						'displayName' => 'Mes préférences',
-						"default" => array(
-							'action' => '/system/Preferences/EditUIPrefs'
-						)
-					);
+				$va_menu_items = $pa_menu_bar['manage']['navigation'];
 
 				$va_menu_items[Deconnexion] = array(
 						'displayName' => 'Déconnexion',
@@ -83,13 +71,7 @@
                 //this adds the CSS changing the style and content of the footer
                 MetaTagManager::addLink('stylesheet', __CA_URL_ROOT__."/app/plugins/providencePluginUserMenu/css/providencePluginUserMenu.css",'text/css');
 
-
-                print $va_views_images_path;
-
-				$pa_menu_bar['providencePluginUserMenu_menu'] = array(
-					'displayName' => "➜",
-					'navigation' => $va_menu_items
-				);
+				$pa_menu_bar['manage']['navigation'] = $va_menu_items;
 			}
 
 			return $pa_menu_bar;
