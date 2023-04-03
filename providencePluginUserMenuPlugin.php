@@ -53,14 +53,14 @@
 					$va_menu_items = array();
 				}
 
-				$va_menu_items[Mes_preferences] = array(
+				$va_menu_items["Mes_preferences"] = array(
 						'displayName' => 'Mes préférences',
 						"default" => array(
 							'action' => '/system/Preferences/EditUIPrefs'
 						)
 					);
 
-				$va_menu_items[Deconnexion] = array(
+				$va_menu_items["Deconnexion"] = array(
 						'displayName' => 'Déconnexion',
 						"default" => array(
 							'action' => '/system/auth/logout'
